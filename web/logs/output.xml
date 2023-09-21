@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.8 on win32)" generated="20230119 20:14:53.015" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro" source="C:\robotjr\uber-eats\web\test\cadastro.robot">
+<test id="s1-t1" name="Preencher os campos do entregador" line="10">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:14:53.742" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\4f44a39e-00d7-459e-8f18-a8e7f04aa4b9"}</msg>
+<msg timestamp="20230119 20:14:54.111" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\4f44a39e-00d7-459e-8f18-a8e7f04aa4b9"}</msg>
+<status status="PASS" starttime="20230119 20:14:53.742" endtime="20230119 20:14:54.111"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:14:55.294" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:14:55.295" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:14:54.111" endtime="20230119 20:14:55.295"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:14:55.295" endtime="20230119 20:14:55.431"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:53.742" endtime="20230119 20:14:55.432"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>junior</arg>
+<arg>00100200345</arg>
+<arg>ljh.jj@gmail.com</arg>
+<arg>81978254751</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.435" level="INFO">Fills the text 'junior' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.433" endtime="20230119 20:14:55.494"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.494" level="INFO">Fills the text '00100200345' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.494" endtime="20230119 20:14:55.537"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.538" level="INFO">Fills the text 'ljh.jj@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.538" endtime="20230119 20:14:55.565"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.566" level="INFO">Fills the text '81978254751' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.566" endtime="20230119 20:14:55.597"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.432" endtime="20230119 20:14:55.598"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.600" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.599" endtime="20230119 20:14:55.629"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.630" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.630" endtime="20230119 20:14:55.659"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:14:55.660" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:14:55.659" endtime="20230119 20:14:55.690"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.598" endtime="20230119 20:14:55.690"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:14:55.692" endtime="20230119 20:14:55.742"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.692" endtime="20230119 20:14:55.743"/>
+</kw>
+<kw name="Click on the bike" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=span &gt;&gt; text=Moto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:14:55.744" endtime="20230119 20:14:55.783"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.744" endtime="20230119 20:14:55.783"/>
+</kw>
+<kw name="Upload photo" library="keywords">
+<kw name="Upload File By Selector" library="Browser">
+<arg>css=input[type="file"]</arg>
+<arg>C:\\robotjr\\uber-eats\\web\\test\\imagem\\cnh-digital.jpg</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from `path` to file input element matched by selector.</doc>
+<status status="PASS" starttime="20230119 20:14:55.786" endtime="20230119 20:14:55.876"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.784" endtime="20230119 20:14:55.876"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:14:55.878" endtime="20230119 20:14:55.981"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.877" endtime="20230119 20:14:55.982"/>
+</kw>
+<kw name="Check message" library="keywords">
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div &gt;&gt; text=Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato.</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:14:55.999" level="INFO">Waited for Element with selector css=div &gt;&gt; text=Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato. at state visible</msg>
+<status status="PASS" starttime="20230119 20:14:55.982" endtime="20230119 20:14:56.000"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:55.982" endtime="20230119 20:14:56.001"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:01.011" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230119 20:14:56.003" endtime="20230119 20:15:01.011"/>
+</kw>
+<status status="PASS" starttime="20230119 20:14:53.742" endtime="20230119 20:15:01.012"/>
+</test>
+<test id="s1-t2" name="Preencher sem o campo NOME COMPLETO" line="23">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:01.134" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\6b394374-91df-4e15-a674-50f76da891b4"}</msg>
+<msg timestamp="20230119 20:15:01.511" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\6b394374-91df-4e15-a674-50f76da891b4"}</msg>
+<status status="PASS" starttime="20230119 20:15:01.131" endtime="20230119 20:15:01.511"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:02.710" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:02.710" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:01.512" endtime="20230119 20:15:02.710"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:02.710" endtime="20230119 20:15:02.861"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:01.131" endtime="20230119 20:15:02.861"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>${EMPTY}</arg>
+<arg>00133564635</arg>
+<arg>ljh.jj@gmail.com</arg>
+<arg>8179124512</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:02.863" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:02.862" endtime="20230119 20:15:02.898"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:02.899" level="INFO">Fills the text '00133564635' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:02.898" endtime="20230119 20:15:02.943"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:02.943" level="INFO">Fills the text 'ljh.jj@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:02.943" endtime="20230119 20:15:02.981"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:02.982" level="INFO">Fills the text '8179124512' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:02.982" endtime="20230119 20:15:03.013"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:02.861" endtime="20230119 20:15:03.013"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:03.014" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:03.014" endtime="20230119 20:15:03.047"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:03.047" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:03.047" endtime="20230119 20:15:03.078"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:03.078" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:03.078" endtime="20230119 20:15:03.129"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:03.013" endtime="20230119 20:15:03.129"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:03.132" endtime="20230119 20:15:03.174"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:03.131" endtime="20230119 20:15:03.175"/>
+</kw>
+<kw name="Click on the bike" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=span &gt;&gt; text=Moto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:03.176" endtime="20230119 20:15:03.215"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:03.176" endtime="20230119 20:15:03.216"/>
+</kw>
+<kw name="Upload photo" library="keywords">
+<kw name="Upload File By Selector" library="Browser">
+<arg>css=input[type="file"]</arg>
+<arg>C:\\robotjr\\uber-eats\\web\\test\\imagem\\cnh-digital.jpg</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from `path` to file input element matched by selector.</doc>
+<status status="PASS" starttime="20230119 20:15:03.220" endtime="20230119 20:15:03.298"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:03.218" endtime="20230119 20:15:03.299"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:03.304" endtime="20230119 20:15:03.366"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:03.301" endtime="20230119 20:15:03.368"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>É necessário informar o nome</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:03.391" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=É necessário informar o nome at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:03.373" endtime="20230119 20:15:03.391"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:03.371" endtime="20230119 20:15:03.391"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:05.399" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:03.392" endtime="20230119 20:15:05.399"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:01.127" endtime="20230119 20:15:05.402"/>
+</test>
+<test id="s1-t3" name="Preencher sem o campo CPF" line="36">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:05.554" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\e5a5957d-1982-428b-9d13-8673995f79c1"}</msg>
+<msg timestamp="20230119 20:15:06.007" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\e5a5957d-1982-428b-9d13-8673995f79c1"}</msg>
+<status status="PASS" starttime="20230119 20:15:05.552" endtime="20230119 20:15:06.007"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:07.395" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:07.395" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:06.008" endtime="20230119 20:15:07.395"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:07.396" endtime="20230119 20:15:07.515"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:05.550" endtime="20230119 20:15:07.516"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>juniorbrisa</arg>
+<arg>${EMPTY}</arg>
+<arg>ljh.jj@gmail.com</arg>
+<arg>8179124512</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.523" level="INFO">Fills the text 'juniorbrisa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.521" endtime="20230119 20:15:07.573"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.574" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.574" endtime="20230119 20:15:07.608"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.610" level="INFO">Fills the text 'ljh.jj@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.609" endtime="20230119 20:15:07.639"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.641" level="INFO">Fills the text '8179124512' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.640" endtime="20230119 20:15:07.664"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:07.517" endtime="20230119 20:15:07.665"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.666" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.665" endtime="20230119 20:15:07.693"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.694" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.694" endtime="20230119 20:15:07.715"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:07.716" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:07.716" endtime="20230119 20:15:07.761"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:07.665" endtime="20230119 20:15:07.761"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:07.763" endtime="20230119 20:15:07.809"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:07.762" endtime="20230119 20:15:07.810"/>
+</kw>
+<kw name="Click on the bike" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=span &gt;&gt; text=Moto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:07.811" endtime="20230119 20:15:07.848"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:07.811" endtime="20230119 20:15:07.848"/>
+</kw>
+<kw name="Upload photo" library="keywords">
+<kw name="Upload File By Selector" library="Browser">
+<arg>css=input[type="file"]</arg>
+<arg>C:\\robotjr\\uber-eats\\web\\test\\imagem\\cnh-digital.jpg</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from `path` to file input element matched by selector.</doc>
+<status status="PASS" starttime="20230119 20:15:07.849" endtime="20230119 20:15:07.928"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:07.848" endtime="20230119 20:15:07.929"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:07.930" endtime="20230119 20:15:08.009"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:07.929" endtime="20230119 20:15:08.009"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>É necessário informar o CPF</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:08.031" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=É necessário informar o CPF at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:08.011" endtime="20230119 20:15:08.031"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:08.010" endtime="20230119 20:15:08.031"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:10.035" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:08.032" endtime="20230119 20:15:10.035"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:05.546" endtime="20230119 20:15:10.039"/>
+</test>
+<test id="s1-t4" name="Preencher com o CPF INVALIDO" line="49">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:10.182" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\bc4c8042-d5a4-4d4f-a890-f02067f3b0c9"}</msg>
+<msg timestamp="20230119 20:15:10.583" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\bc4c8042-d5a4-4d4f-a890-f02067f3b0c9"}</msg>
+<status status="PASS" starttime="20230119 20:15:10.181" endtime="20230119 20:15:10.583"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:11.730" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:11.730" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:10.584" endtime="20230119 20:15:11.730"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:11.731" endtime="20230119 20:15:11.848"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:10.180" endtime="20230119 20:15:11.848"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>juniorbrisa</arg>
+<arg>0013255</arg>
+<arg>ljh.jj@gmail.com</arg>
+<arg>8179124512</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:11.849" level="INFO">Fills the text 'juniorbrisa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:11.849" endtime="20230119 20:15:11.897"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:11.898" level="INFO">Fills the text '0013255' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:11.897" endtime="20230119 20:15:11.945"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:11.946" level="INFO">Fills the text 'ljh.jj@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:11.945" endtime="20230119 20:15:11.976"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:11.977" level="INFO">Fills the text '8179124512' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:11.977" endtime="20230119 20:15:12.007"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:11.848" endtime="20230119 20:15:12.008"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:12.010" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:12.009" endtime="20230119 20:15:12.031"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:12.031" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:12.031" endtime="20230119 20:15:12.065"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:12.065" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:12.065" endtime="20230119 20:15:12.095"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:12.008" endtime="20230119 20:15:12.096"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:12.097" endtime="20230119 20:15:12.160"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:12.096" endtime="20230119 20:15:12.161"/>
+</kw>
+<kw name="Click on the bike" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=span &gt;&gt; text=Moto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:12.162" endtime="20230119 20:15:12.199"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:12.161" endtime="20230119 20:15:12.199"/>
+</kw>
+<kw name="Upload photo" library="keywords">
+<kw name="Upload File By Selector" library="Browser">
+<arg>css=input[type="file"]</arg>
+<arg>C:\\robotjr\\uber-eats\\web\\test\\imagem\\cnh-digital.jpg</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from `path` to file input element matched by selector.</doc>
+<status status="PASS" starttime="20230119 20:15:12.202" endtime="20230119 20:15:12.280"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:12.200" endtime="20230119 20:15:12.280"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:12.282" endtime="20230119 20:15:12.362"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:12.281" endtime="20230119 20:15:12.362"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>Oops! CPF inválido</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:12.381" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=Oops! CPF inválido at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:12.364" endtime="20230119 20:15:12.381"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:12.363" endtime="20230119 20:15:12.381"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:14.388" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:12.382" endtime="20230119 20:15:14.388"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:10.176" endtime="20230119 20:15:14.391"/>
+</test>
+<test id="s1-t5" name="Preencher sem o campo EMAIL" line="62">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:14.531" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\c47baa42-cfcf-4745-b50c-f20656103368"}</msg>
+<msg timestamp="20230119 20:15:15.021" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\c47baa42-cfcf-4745-b50c-f20656103368"}</msg>
+<status status="PASS" starttime="20230119 20:15:14.530" endtime="20230119 20:15:15.021"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:16.152" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:16.152" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:15.022" endtime="20230119 20:15:16.153"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:16.154" endtime="20230119 20:15:16.264"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:14.530" endtime="20230119 20:15:16.265"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>juniorbrisa</arg>
+<arg>00133564635</arg>
+<arg>${EMPTY}</arg>
+<arg>8179124512</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.268" level="INFO">Fills the text 'juniorbrisa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.267" endtime="20230119 20:15:16.326"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.328" level="INFO">Fills the text '00133564635' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.328" endtime="20230119 20:15:16.363"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.364" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.363" endtime="20230119 20:15:16.395"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.396" level="INFO">Fills the text '8179124512' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.395" endtime="20230119 20:15:16.420"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:16.265" endtime="20230119 20:15:16.422"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.425" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.424" endtime="20230119 20:15:16.446"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.447" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.447" endtime="20230119 20:15:16.469"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:16.473" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:16.472" endtime="20230119 20:15:16.496"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:16.424" endtime="20230119 20:15:16.496"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:16.497" endtime="20230119 20:15:16.560"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:16.497" endtime="20230119 20:15:16.560"/>
+</kw>
+<kw name="Click on the bike" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=span &gt;&gt; text=Moto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:16.561" endtime="20230119 20:15:16.598"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:16.561" endtime="20230119 20:15:16.598"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:16.599" endtime="20230119 20:15:16.660"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:16.599" endtime="20230119 20:15:16.660"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>É necessário informar o email</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:16.678" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=É necessário informar o email at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:16.662" endtime="20230119 20:15:16.678"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:16.662" endtime="20230119 20:15:16.678"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:18.693" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:16.679" endtime="20230119 20:15:18.693"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:14.519" endtime="20230119 20:15:18.694"/>
+</test>
+<test id="s1-t6" name="Preencher sem o campo CEP" line="73">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:18.841" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\1143e913-cf33-4ecf-bbe8-b0ef9082d3ff"}</msg>
+<msg timestamp="20230119 20:15:19.259" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\1143e913-cf33-4ecf-bbe8-b0ef9082d3ff"}</msg>
+<status status="PASS" starttime="20230119 20:15:18.837" endtime="20230119 20:15:19.260"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:20.445" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:20.445" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:19.260" endtime="20230119 20:15:20.446"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:20.446" endtime="20230119 20:15:20.595"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:18.835" endtime="20230119 20:15:20.595"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>${EMPTY}</arg>
+<arg>363</arg>
+<arg>CASA</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:20.596" level="INFO">Fills the text '' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:20.596" endtime="20230119 20:15:20.631"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:20.632" level="INFO">Fills the text '363' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:20.631" endtime="20230119 20:15:20.693"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:20.695" level="INFO">Fills the text 'CASA' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:20.695" endtime="20230119 20:15:20.728"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:20.595" endtime="20230119 20:15:20.728"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:20.729" endtime="20230119 20:15:20.776"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:20.729" endtime="20230119 20:15:20.776"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>Informe um CEP válido</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:20.793" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=Informe um CEP válido at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:20.777" endtime="20230119 20:15:20.793"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:20.776" endtime="20230119 20:15:20.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:22.797" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:20.794" endtime="20230119 20:15:22.797"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:18.829" endtime="20230119 20:15:22.798"/>
+</test>
+<test id="s1-t7" name="Preencher o fomulario e NÃO CLICAR NO METODO DE ENTREGA" line="81">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:22.940" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\abe80e1f-7375-44e3-b11d-158d15d1736e"}</msg>
+<msg timestamp="20230119 20:15:23.384" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\abe80e1f-7375-44e3-b11d-158d15d1736e"}</msg>
+<status status="PASS" starttime="20230119 20:15:22.936" endtime="20230119 20:15:23.384"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:24.746" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:24.746" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:23.384" endtime="20230119 20:15:24.746"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:24.746" endtime="20230119 20:15:24.871"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:22.935" endtime="20230119 20:15:24.873"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>junior</arg>
+<arg>00100200345</arg>
+<arg>ljh.jj@gmail.com</arg>
+<arg>81978254751</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:24.877" level="INFO">Fills the text 'junior' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:24.877" endtime="20230119 20:15:24.928"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:24.928" level="INFO">Fills the text '00100200345' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:24.928" endtime="20230119 20:15:24.978"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:24.979" level="INFO">Fills the text 'ljh.jj@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:24.979" endtime="20230119 20:15:25.013"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:25.014" level="INFO">Fills the text '81978254751' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:25.014" endtime="20230119 20:15:25.049"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:24.876" endtime="20230119 20:15:25.049"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:25.053" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:25.053" endtime="20230119 20:15:25.081"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:25.081" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:25.081" endtime="20230119 20:15:25.110"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:25.112" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:25.111" endtime="20230119 20:15:25.137"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:25.051" endtime="20230119 20:15:25.139"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:25.142" endtime="20230119 20:15:25.194"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:25.141" endtime="20230119 20:15:25.195"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:25.195" endtime="20230119 20:15:25.245"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:25.195" endtime="20230119 20:15:25.245"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>Selecione o método de entrega</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:25.261" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=Selecione o método de entrega at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:25.246" endtime="20230119 20:15:25.262"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:25.246" endtime="20230119 20:15:25.262"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:27.276" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:25.263" endtime="20230119 20:15:27.276"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:22.930" endtime="20230119 20:15:27.277"/>
+</test>
+<test id="s1-t8" name="Preencher os fomularios MENOS UPLOAD DA FOTO" line="91">
+<kw name="Access homepage" library="keywords">
+<kw name="New Browser" library="Browser">
+<arg>headless=False</arg>
+<arg>browser=chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230119 20:15:27.415" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\c1fd5c34-cf52-4c6f-99bb-866040bc35ef"}</msg>
+<msg timestamp="20230119 20:15:27.869" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\robotjr\\uber-eats\\web\\logs\\browser\\traces\\c1fd5c34-cf52-4c6f-99bb-866040bc35ef"}</msg>
+<status status="PASS" starttime="20230119 20:15:27.414" endtime="20230119 20:15:27.870"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://buger-eats.vercel.app/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230119 20:15:29.143" level="INFO">Successfully initialized new page object and opened url: https://buger-eats.vercel.app/</msg>
+<msg timestamp="20230119 20:15:29.143" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230119 20:15:27.870" endtime="20230119 20:15:29.143"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>css=strong &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:29.144" endtime="20230119 20:15:29.304"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:27.414" endtime="20230119 20:15:29.305"/>
+</kw>
+<kw name="Register delivery data" library="keywords">
+<arg>junior</arg>
+<arg>00100200345</arg>
+<arg>ljh.jj@gmail.com</arg>
+<arg>81978254751</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=name]</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.309" level="INFO">Fills the text 'junior' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.308" endtime="20230119 20:15:29.358"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=cpf]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.360" level="INFO">Fills the text '00100200345' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.359" endtime="20230119 20:15:29.398"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.398" level="INFO">Fills the text 'ljh.jj@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.398" endtime="20230119 20:15:29.427"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=whatsapp]</arg>
+<arg>${contato}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.428" level="INFO">Fills the text '81978254751' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.427" endtime="20230119 20:15:29.448"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:29.307" endtime="20230119 20:15:29.448"/>
+</kw>
+<kw name="Register delivery address" library="keywords">
+<arg>54759475</arg>
+<arg>332</arg>
+<arg>casa</arg>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=postalcode]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.449" level="INFO">Fills the text '54759475' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.449" endtime="20230119 20:15:29.480"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-number]</arg>
+<arg>${numero}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.480" level="INFO">Fills the text '332' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.480" endtime="20230119 20:15:29.500"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>css=input[name=address-details]</arg>
+<arg>${compl}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230119 20:15:29.503" level="INFO">Fills the text 'casa' in the given field.</msg>
+<status status="PASS" starttime="20230119 20:15:29.501" endtime="20230119 20:15:29.529"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:29.448" endtime="20230119 20:15:29.529"/>
+</kw>
+<kw name="Click on search" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=input[type=button] &gt;&gt; text=Buscar CEP</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:29.530" endtime="20230119 20:15:29.596"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:29.529" endtime="20230119 20:15:29.597"/>
+</kw>
+<kw name="Click on the bike" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=span &gt;&gt; text=Moto</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:29.597" endtime="20230119 20:15:29.632"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:29.597" endtime="20230119 20:15:29.632"/>
+</kw>
+<kw name="Click register courier" library="keywords">
+<kw name="Click" library="Browser">
+<arg>css=button &gt;&gt; text=Cadastre-se para fazer entregas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230119 20:15:29.633" endtime="20230119 20:15:29.694"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:29.632" endtime="20230119 20:15:29.694"/>
+</kw>
+<kw name="Error alert" library="keywords">
+<arg>Adicione uma foto da sua CNH</arg>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=div span &gt;&gt; text=${alert}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230119 20:15:29.713" level="INFO">Waited for Element with selector css=div span &gt;&gt; text=Adicione uma foto da sua CNH at state visible</msg>
+<status status="PASS" starttime="20230119 20:15:29.695" endtime="20230119 20:15:29.713"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:29.695" endtime="20230119 20:15:29.713"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230119 20:15:31.725" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230119 20:15:29.714" endtime="20230119 20:15:31.725"/>
+</kw>
+<status status="PASS" starttime="20230119 20:15:27.405" endtime="20230119 20:15:31.726"/>
+</test>
+<doc>Entra na pagina de cadatro para Preencher os dados do entregador.</doc>
+<status status="PASS" starttime="20230119 20:14:53.015" endtime="20230119 20:15:31.845"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
